@@ -1,0 +1,245 @@
+﻿{
+  "name": "IISBookClub_2_1Speaker",
+  "modelName": "i-i-s-book-club-2-1-speaker",
+  "className": "Speaker",
+  "nameSpace": "IIS.BookClub_2_1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "firstName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "lastName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "middleName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "foto",
+      "type": "file",
+      "flexberryType": "WebFile",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "bcember_SpeakerE",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "firstName",
+          "caption": "First name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Last name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Middle name",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "foto",
+          "caption": "Foto",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "bcember_SpeakerL",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "firstName",
+          "caption": "First name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Last name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Middle name",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "foto",
+          "caption": "Foto",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "fdesigner_SpeakerE",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "firstName",
+          "caption": "First name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Last name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Middle name",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "foto",
+          "caption": "Foto",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "fdesigner_SpeakerL",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "firstName",
+          "caption": "First name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Last name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Middle name",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "foto",
+          "caption": "Foto",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "SpeakerE",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "firstName",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "foto",
+          "caption": "Фотография",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "SpeakerL",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "firstName",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "foto",
+          "caption": "Фотография",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
