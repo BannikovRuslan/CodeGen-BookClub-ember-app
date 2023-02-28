@@ -129,6 +129,10 @@ $.extend(true, translations, {
     'i-i-s-book-club-2-1-speaker-e': IISBookClub_2_1SpeakerEForm
   },
 
+  extra: {
+    'toggler-caption-book-info': 'Информация по книге'
+  }
+
 });
 
 export default translations;

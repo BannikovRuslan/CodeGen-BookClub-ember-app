@@ -100,6 +100,18 @@ export let defineProjections = function (modelClass) {
     }, { index: 7, displayMemberPath: 'title' })
   });
 
+  modelClass.defineProjection('PresentationBook', 'i-i-s-book-club-2-1-presentation', {
+    date: attr('Дата', { index: 0 }),
+    speaker: belongsTo('i-i-s-book-club-2-1-speaker', 'Фамилия', {
+      lastName: attr('Фамилия', { index: 1 }),
+      firstName: attr('Имя', { index: 2 }),
+      middleName: attr('Отчество', { index: 3 })
+    }, { index: -1, hidden: true }),
+    meeting: belongsTo('i-i-s-book-club-2-1-meeting', '', {
+      date: attr('', { index: 4, hidden: true })
+    }, { index: -1, hidden: true })
+  });
+
   modelClass.defineProjection('PresentationE', 'i-i-s-book-club-2-1-presentation', {
     date: attr('Дата Доклада', { index: 0 }),
     rating: attr('Оценка книги', { index: 1 }),
@@ -114,5 +126,17 @@ export let defineProjections = function (modelClass) {
     book: belongsTo('i-i-s-book-club-2-1-book', 'Книга', {
       title: attr('~', { index: 10, hidden: true })
     }, { index: 9, displayMemberPath: 'title' })
+  });
+
+  modelClass.defineProjection('PresentationSpeaker', 'i-i-s-book-club-2-1-presentation', {
+    date: attr('Дата выступления', { index: 0 }),
+    book: belongsTo('i-i-s-book-club-2-1-book', 'Заголовок', {
+      title: attr('Заголовок', { index: 1 }),
+      author: attr('Автор', { index: 2 }),
+      description: attr('Описание / ссылка', { index: 3 })
+    }, { index: -1, hidden: true }),
+    meeting: belongsTo('i-i-s-book-club-2-1-meeting', '', {
+      date: attr('', { index: 4, hidden: true })
+    }, { index: -1, hidden: true })
   });
 };

@@ -42,6 +42,42 @@ export default ListFormRoute.extend({
     @type Object
   */
   developerUserSettings: computed(function() {
-    return { IISBookClub_2_1MeetingL: {} }
+    return { IISBookClub_2_1MeetingL: {
+      "DEFAULT": {
+        "columnWidths": [
+          {
+            "propName": "OlvRowToolbar",
+            "width": 170
+          },
+          {
+            "propName": "date",
+            "width": 200
+          },
+        ],
+      }
+    } }
   }),
+
+  objectListViewLimitPredicate(options) {
+    
+    const filter = options.params.filter;
+    if (!filter) {
+      return null;
+    }
+
+    let modelName = options.modelName;
+    // let projectionName = options.projectionName;
+    
+    // switch (modelName) {
+    //   // eslint-disable-next-line no-case-declarations
+    //   case 'i-i-s-book-club-2-1-speaker':
+    //     const spFirstName = new StringPredicate('firstName').contains(filter);
+    //     const spLastName = new StringPredicate('lastName').contains(filter);
+    //     const spMiddleName = new StringPredicate('middleName').contains(filter);
+        
+    //     return new ComplexPredicate(Condition.Or, spFirstName, spLastName, spMiddleName);
+    //   default:
+    //     return null;
+    // }
+  },
 });

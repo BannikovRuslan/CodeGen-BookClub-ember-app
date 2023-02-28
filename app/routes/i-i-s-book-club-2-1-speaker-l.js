@@ -87,7 +87,7 @@ export default ListFormRoute.extend({
     
     switch (modelName) {
       // eslint-disable-next-line no-case-declarations
-      case this.modelName:
+      case 'i-i-s-book-club-2-1-speaker':
         const spFirstName = new StringPredicate('firstName').contains(filter);
         const spLastName = new StringPredicate('lastName').contains(filter);
         const spMiddleName = new StringPredicate('middleName').contains(filter);

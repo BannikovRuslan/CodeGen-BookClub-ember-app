@@ -24,9 +24,9 @@ export default EditFormRoute.extend(MultiListRoute, MultiListModelEdit, {
       objectlistviewEvents: this.get('objectlistviewEvents'),
       componentName: 'olvSpeakerMeetings',
       modelName: 'i-i-s-book-club-2-1-presentation',
-      projectionName: 'PresentationE',
-      editFormRoute: 'i-i-s-book-club-2-1-meeting-e',
-      
+      projectionName: 'PresentationSpeaker',
+      editFormRoute: 'i-i-s-book-club-2-1-meeting-e', 
+         
     }));
   },
 
@@ -34,21 +34,13 @@ export default EditFormRoute.extend(MultiListRoute, MultiListModelEdit, {
     const targetName = transition.targetName;
     const modelId = transition.params[targetName].id;
     this.set("modelId", modelId);
-
     return this._super(...arguments);
   },
 
-  // async model( { id } ) {
-
-    
-  //   return await this.get('store').findRecord('i-i-s-book-club-2-1-speaker', id);
-  // },
-
   async afterModel(model, transition) {
-    //let m = await this.get('store').findAll('i-i-s-book-club-2-1-meeting', {include: 'i-i-s-book-club-2-1-presentation'});
     let p = new Builder(this.store)
                 .from("i-i-s-book-club-2-1-presentation")
-                .select("meeting.date, book.title, book.author")
+                .selectByProjection("PresentationSpeaker")
                 .where("speaker.id", FilterOperator.Eq, model.id);
 
     let meetings = await this.store.query('i-i-s-book-club-2-1-presentation', p.build());

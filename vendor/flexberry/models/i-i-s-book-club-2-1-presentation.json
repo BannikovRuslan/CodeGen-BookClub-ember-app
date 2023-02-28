@@ -240,6 +240,75 @@
       "hasMany": []
     },
     {
+      "name": "PresentationBook",
+      "modelName": "i-i-s-book-club-2-1-presentation",
+      "attrs": [
+        {
+          "name": "date",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Speaker",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "lastName",
+              "caption": "Фамилия",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "firstName",
+              "caption": "Имя",
+              "hidden": false,
+              "index": 2
+            },
+            {
+              "name": "middleName",
+              "caption": "Отчество",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия",
+          "name": "speaker",
+          "relatedTo": "i-i-s-book-club-2-1-speaker",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Meeting",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "date",
+              "caption": "",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "",
+          "name": "meeting",
+          "relatedTo": "i-i-s-book-club-2-1-meeting",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
       "name": "PresentationE",
       "modelName": "i-i-s-book-club-2-1-presentation",
       "attrs": [
@@ -335,29 +404,15 @@
     {
       "name": "PresentationSpeaker",
       "modelName": "i-i-s-book-club-2-1-presentation",
-      "attrs": [],
-      "belongsTo": [
+      "attrs": [
         {
-          "lookupValue": null,
-          "lookupValueField": null,
-          "relationName": "Meeting",
-          "belongsTo": [],
+          "name": "date",
+          "caption": "Дата выступления",
           "hidden": false,
-          "attrs": [
-            {
-              "name": "date",
-              "caption": "",
-              "hidden": false,
-              "index": 0
-            }
-          ],
-          "index": -1,
-          "type": "default",
-          "caption": "",
-          "name": "meeting",
-          "relatedTo": "i-i-s-book-club-2-1-meeting",
-          "inverse": null
-        },
+          "index": 0
+        }
+      ],
+      "belongsTo": [
         {
           "lookupValue": null,
           "lookupValueField": null,
@@ -366,35 +421,50 @@
           "hidden": false,
           "attrs": [
             {
-              "name": "cover",
-              "caption": "",
+              "name": "title",
+              "caption": "Заголовок",
               "hidden": false,
               "index": 1
             },
             {
-              "name": "title",
-              "caption": "",
+              "name": "author",
+              "caption": "Автор",
               "hidden": false,
               "index": 2
             },
             {
-              "name": "author",
-              "caption": "",
+              "name": "description",
+              "caption": "Описание / ссылка",
               "hidden": false,
               "index": 3
-            },
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Заголовок",
+          "name": "book",
+          "relatedTo": "i-i-s-book-club-2-1-book",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Meeting",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
             {
-              "name": "description",
+              "name": "date",
               "caption": "",
-              "hidden": false,
+              "hidden": true,
               "index": 4
             }
           ],
           "index": -1,
           "type": "default",
           "caption": "",
-          "name": "book",
-          "relatedTo": "i-i-s-book-club-2-1-book",
+          "name": "meeting",
+          "relatedTo": "i-i-s-book-club-2-1-meeting",
           "inverse": null
         }
       ],
